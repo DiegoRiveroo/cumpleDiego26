@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego — Midnight Glam</title>
+  <meta name="description" content="Invitación interactiva para el cumpleaños de Diego — sábado 4 de julio de 2026, 20:00 hs." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locked">
+  <div class="grain"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- CANCIÓN DE FONDO: reemplaza este archivo por tu canción -->
+  <!-- Ruta sugerida: assets/background.mp3 -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/background.mp3" type="audio/mpeg" />
+  </audio>
+
+  <header class="floating-nav">
+    <span>DIEGO · MIDNIGHT GLAM</span>
+    <button id="musicToggle" aria-label="Activar o pausar música">Sound off</button>
+  </header>
+
+  <main>
+    <section class="panel hero" id="intro">
+      <!-- VIDEO HERO: ejemplo champagne / copas / reflejos -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/hero-champagne.mp4" type="video/mp4" />
+      </video>
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+
+
+      <div class="content hero-content">
+        <p class="eyebrow">Una noche para compartir</p>
+        <h1>DIEGO</h1>
+        <p class="subtitle">Midnight Glam</p>
+        <p class="date">Sábado 04 · 07 · 2026 · 20:00 hs</p>
+
+        <div class="countdown" id="countdown">
+          <span><strong>--</strong><small>días</small></span>
+          <span><strong>--</strong><small>horas</small></span>
+          <span><strong>--</strong><small>min</small></span>
+          <span><strong>--</strong><small>seg</small></span>
+        </div>
+
+        <button class="primary-btn" id="enterBtn">Entrar a la invitación</button>
+        <p class="microcopy">Una cena-cóctel para celebrar con buena comida, buena música de fondo y buena compañía.</p>
+      </div>
+    </section>
+
+    <section class="panel night scene-silver">
+      <!-- VIDEO 01: ejemplo copa servida / mesa elegante -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/01-la-noche.mp4" type="video/mp4" />
+      </video>
+
+      <div class="liquid-shape"></div>
+      <div class="content narrow reveal">
+        <p class="section-number">01</p>
+        <h2>La noche</h2>
+        <p>Quiero celebrar este cumpleaños de una forma sencilla pero especial: buena comida, buenos tragos y, sobre todo, buena compañía.</p>
+        <p>No esperes una discoteca ni una fiesta tradicional. Será una cena-cóctel pensada para compartir, conversar, brindar y disfrutar juntos en un ambiente relajado.</p>
+      </div>
+    </section>
+
+    <section class="panel agenda scene-black">
+      <!-- VIDEO 02: ejemplo mesa servida / aperitivos / velas -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/02-programa.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content card reveal">
+        <p class="section-number">02</p>
+        <h2>Programa</h2>
+
+        <div class="timeline">
+          <div><strong>20:00</strong><span>Glam Pics & Drinks</span><small>Llegada, fotos, tragos y bienvenida.</small></div>
+          <div><strong>21:00</strong><span>Aperitivos y entradas</span><small>Un momento para encontrarnos, conversar y comenzar la noche.</small></div>
+          <div><strong>22:00</strong><span>Cena</span><small>El plato principal de la noche.</small></div>
+          <div><strong>23:00</strong><span>Postre y cumpleaños</span><small>Brindis, torta y celebración.</small></div>
+          <div><strong>00:00</strong><span>Cocktails & Chill</span><small>Tragos, música y buena conversación para cerrar la noche.</small></div>
+        </div>
+
+        <p class="note strong-note">La noche está pensada como una experiencia en distintos momentos, por lo que agradeceré mucho la puntualidad para que todos podamos disfrutarla tal como fue planeada.</p>
+      </div>
+    </section>
+
+    <section class="panel location scene-city">
+      <!-- VIDEO 03: ejemplo ciudad de noche / llegada / calle elegante -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/03-ubicacion.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content card reveal">
+        <p class="section-number">03</p>
+        <h2>Ubicación</h2>
+        <p class="big-detail">Nos vemos acá</p>
+        <p>La dirección exacta está disponible en el mapa.</p>
+        <a class="primary-btn link-btn" href="https://maps.app.goo.gl/MX5BmUf7xhDpro1w8?g_st=iw" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+    </section>
+
+    <section class="panel dress scene-crystal">
+      <!-- VIDEO 04: ejemplo telas satinadas / cristales / brillos plateados -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/04-dress-code.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content split reveal">
+        <div>
+          <p class="section-number">04</p>
+          <h2>Dress code</h2>
+          <p class="big-detail">Midnight Glam</p>
+          <p>Negro, plata, satén, brillos, cristales o cualquier detalle elegante que te haga sentir cómodo y acorde con la temática.</p>
+          <a class="primary-btn link-btn" href="https://pin.it/c446sSsg2" target="_blank" rel="noopener">Ver inspiración</a>
+        </div>
+
+        <div class="mini-card">
+          <h3>Idea general</h3>
+          <p>Elegante, nocturno, cómodo y con algún detalle especial. No tiene que ser literal ni complicado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel playlist scene-metal">
+      <!-- VIDEO 05: ejemplo bola de disco / vinilo / visual abstracto suave -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/05-playlist.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content split reveal">
+        <div>
+          <p class="section-number">05</p>
+          <h2>Playlist colaborativa</h2>
+          <p>Me encanta la música dance, house, techno, electrónica y estilos similares.</p>
+          <p>Si quieres aportar tu toque a la noche, agrega directamente tus canciones favoritas a la playlist colaborativa.</p>
+          <a class="primary-btn link-btn" href="https://open.spotify.com/playlist/07JCoGsn9cwdKOegrcyIzG?si=1U4fcH7eSH-TrNNvA7uqZA&pi=LNTQevZHRVajq" target="_blank" rel="noopener">Agregar canción en Spotify</a>
+        </div>
+
+        <div class="mini-card">
+          <h3>Cumple Diego 2026 🪩</h3>
+          <p>Dance · House · Techno · Electrónica · Chill</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel gifts scene-soft">
+      <!-- VIDEO 06: ejemplo detalle envuelto / mesa / copa -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/06-regalos.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content narrow reveal">
+        <p class="section-number">06</p>
+        <h2>Regalos</h2>
+        <p>Tu presencia ya es un regalo y lo que más ilusión me hace es compartir esta noche contigo.</p>
+        <p>Si aun así quieres tener un detalle, será bien recibido. No importa el valor ni el tamaño; lo que más apreciaré es que haya sido elegido con cariño y pensando en mí.</p>
+      </div>
+    </section>
+
+    <section class="panel memory scene-nebula">
+      <!-- VIDEO 07: ejemplo escritura / recuerdos / textura editorial -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/07-mensaje.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content split reveal">
+        <div>
+          <p class="section-number">07</p>
+          <h2>Un mensaje</h2>
+          <p>Si quieres, puedes dejarme una frase, un recuerdo o un deseo para guardar de esa noche.</p>
+        </div>
+
+        <form class="glass-form" id="memoryForm">
+          <h3>Mensaje para Diego</h3>
+          <input name="name" placeholder="Tu nombre" required />
+          <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+          <button type="submit">Guardar mensaje</button>
+          <p class="form-status" id="memoryStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="panel rsvp scene-final">
+      <!-- VIDEO 08: ejemplo puerta / entrada / textura negra y plata -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/08-confirmacion.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content split reveal">
+        <div>
+          <p class="section-number">08</p>
+          <h2>Confirmación</h2>
+          <p class="lead">Por favor completa tu confirmación utilizando tu nombre exactamente como aparece en tu DNI y tu número de documento.</p>
+          <p class="strong-note">Por cuestiones de espacio y organización, la capacidad del evento es limitada. La confirmación previa es obligatoria y los lugares serán asignados por orden de registro.</p>
+          <p>Una vez alcanzada la capacidad máxima, no será posible agregar nuevos asistentes.</p>
+        </div>
+
+        <form class="glass-form" id="rsvpForm">
+          <h3>RSVP</h3>
+          <input name="dniName" placeholder="Nombre como aparece en el DNI" required />
+          <input name="dni" placeholder="DNI" required />
+          <input name="phone" placeholder="Teléfono" required />
+          <select name="attendance" required>
+            <option value="">¿Asistirás?</option>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+            <option value="Tal vez">Tal vez</option>
+          </select>
+          <textarea name="foodRestriction" placeholder="Restricción alimentaria / comentario opcional" rows="4"></textarea>
+          <button type="submit">Confirmar asistencia</button>
+          <p class="form-status" id="rsvpStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="panel finale scene-black">
+      <!-- VIDEO FINAL: ejemplo brindis / copa / cierre elegante -->
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/09-final.mp4" type="video/mp4" />
+      </video>
+
+      <div class="content narrow reveal">
+        <p class="eyebrow">Nos vemos pronto</p>
+        <h2>Gracias por ser parte.</h2>
+        <p>Sábado 4 de julio de 2026 · 20:00 hs</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
